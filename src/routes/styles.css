@@ -1,23 +1,26 @@
-*, *::before, *::after {
+button, label {
+	gap: 8px
+}
+button, input {
+	padding: .75em 1em
+}
+*, ::after, ::before {
 	box-sizing: border-box;
-	margin: 0;
+	margin: 0
 }
-
-:root, input, button {
-  font-family: Inter, sans-serif;
-  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
-	font-size: 20px;
+:root, button, input {
+	font-family: Inter, sans-serif;
+	font-feature-settings: 'liga' 1, 'calt' 1;
+	font-size: 20px
 }
-@supports (font-variation-settings: normal) {
-  :root, input, button { font-family: InterVariable, sans-serif; }
+@supports (font-variation-settings:normal) {
+	:root, button, input {
+		font-family: InterVariable, sans-serif
+	}
 }
-
-label, form {
+form, label {
 	display: flex;
-	flex-direction: column;
-}
-label {
-	gap: 8px;
+	flex-direction: column
 }
 form {
 	padding: 24px;
@@ -26,54 +29,36 @@ form {
 	justify-content: center;
 	min-height: 100dvh;
 	max-width: 600px;
-	margin: auto;
+	margin: auto
 }
-
 button {
 	background: #ff4c4c;
-	color: white;
-	padding: 0.75em 1em;
-	border-radius: 0.5em;
+	color: #fff;
+	border-radius: .5em;
 	border: none;
-	transition: 0.15s ease-out;
+	transition: .15s ease-out;
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	gap: 8px;
+	justify-content: center
 }
-
 button:hover {
-	background: #ff6868;
+	background: #ff6868
 }
-
 button:disabled {
-	background: #ffbbbb !important;
-	scale: 1 !important;
+	background: #fbb !important;
+	scale: 1 !important
 }
-
 input {
-	padding: 0.75em 1em;
-	border-radius: 0.5em;
-	border: 1px solid #cacaca;
+	border-radius: .5em;
+	border: 1px solid #cacaca
 }
-
 input:focus {
-	outline: 4px solid #ffe1e1;
+	outline: #ffe1e1 solid 4px
 }
-
 button:active {
-	scale: 0.95;
+	scale: 0.95
 }
-
-svg {
-	animation: rotation 1s infinite;
+.refresh {
+	animation: 1s infinite rotation
 }
-
-@keyframes rotation {
-	from {
-		rotate: 0;
-	}
-	to {
-		rotate: -360deg;
-	}
-}
+@keyframes rotation{from{rotate:0}to{rotate:-360deg}}
